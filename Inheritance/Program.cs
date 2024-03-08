@@ -1,39 +1,55 @@
 ﻿using System;
+using Inheritance;
 
-namespace Inheritance
+
+// TODO Be sure to follow best practice when creating your classes
+
+/*Create an object of your Bird class
+ *  give values to your members using the object of your Bird class
+ *  
+ * Creatively display the class member values 
+ */
+
+internal class Program
 {
-    class Program
+    private static void Main(string[] args)
     {
-        static void Main(string[] args)
+        var eagle = new Bird()
         {
-            // TODO Be sure to follow best practice when creating your classes
+            //animal properties
+            HasFur = false,
+            IsNocturnal = false,
+            HowManyLegs = 2,
+            IsHerbivore = false,
+        };
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+        //bird properties
+        eagle.CanFly = true;
+        eagle.WinterMigration = "goes south";
+        eagle.TweetNoise = "peal call";
+        eagle.LikesSeeds = false;
 
+        var alligtor = new Reptile()
+        {
+            HasFur = false,
+            IsNocturnal = true,
+            HowManyLegs = 4,
+            IsHerbivore = false,
+            IsColdBlooded = true,
+            Color = "dark green",
+            IsAmphibious = true,
+            HasTail = true,
+        };
 
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
+        //Print info to console
+        Console.WriteLine("Info about eagles.");
+        eagle.AnimalProperties();
+        eagle.BirdInfo();
+        Console.WriteLine("");
+        Console.WriteLine("");
+        Console.WriteLine("Info about alligators.");
+        alligtor.AnimalProperties();
+        alligtor.ReptileInfo();
 
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
-
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
-
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
-        }
     }
 }
